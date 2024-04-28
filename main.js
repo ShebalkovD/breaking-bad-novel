@@ -12,17 +12,21 @@ let heroes = [
     {
         name:"Сalter",
         img: 'url(https://limvet.ru/wp-content/uploads/2018/09/utas_siberian_cat_00.jpg)',
-        text: ['У меня рецидив рака, Гус']
+        text: ['У меня рецидив рака, Гус'],
+        haveChoice: true,
+        choice: ['У меня рак','У меня окунь']
     },
     {
         name:"Guz",
         img: 'url(https://avatars.dzeninfra.ru/get-zen_doc/1707183/pub_5da934efa06eaf00b1dc30f8_5da9369f8f011100ae3a7fb6/scale_1200)',
-        text: ['В каком смысле, Calter']
+        text: ['В каком смысле, Calter'],
+        isChosen: false
     },
     {
         name:"Сalter",
         img: 'url(https://kartinki.pics/uploads/posts/2022-12/1670615864_1-kartinkin-net-p-kartinki-lisikh-kotov-vkontakte-1.jpg)',
-        text: ['В прямом, Гус']
+        text: ['В прямом, Гус'],
+ 
     },
     {
         name:"Guz",
@@ -52,7 +56,9 @@ let heroes = [
     {
         name:"Сalter",
         img: 'url(https://masterpiecer-images.s3.yandex.net/5fbce33bdcf224f:upscaled)',
-        text: ['Ты опять съел весь вискас, Джесси?', 'Я расстворю тебя в лотке, Джесси']
+        text: ['Ты опять съел весь вискас, Джесси?', 'Я расстворю тебя в лотке, Джесси'],
+        
+
     },
     
 
@@ -80,11 +86,48 @@ hero_area.addEventListener('click', function(){
         active_hero = heroes[active_counter]
         page_image.style.backgroundImage = active_hero.img
         hero_name.innerHTML = active_hero.name
-        hero_text.innerHTML = active_hero.text[0]
+        if (active_hero.haveChoice == true){
+            hero_text.innerHTML = `
+            <ul>
+            <li class="choice_one">${active_hero.choice[0]}</li>
+            <li class="choice_two">${active_hero.choice[1]}</li>
+            </ul>
+            `
+            let choiceOneBtn = document.querySelector('.choice_one')
+            choiceOneBtn.addEventListener('click', function(){
+                heroes[3].text[0]="Иди в лабу"
+            })
+            let choiceTwoBtn = document.querySelector('.choice_two')
+            choiceTwoBtn.addEventListener('click', function(){
+                heroes[3].text[0]="Дай потрогать"
+            })
+        }
+        else{
+            hero_text.innerHTML = active_hero.text[0]
+        }
         
     }else{
         text_counter ++
-        hero_text.innerHTML = active_hero.text[text_counter]
+        
+        if (active_hero.haveChoice == true){
+            hero_text.innerHTML = `
+            <ul>
+            <li class="choice_one">${active_hero.choice[0]}</li>
+            <li class="choice_two">${active_hero.choice[1]}</li>
+            </ul>
+            `
+            let choiceOneBtn = document.querySelector('.choice_one')
+            choiceOneBtn.addEventListener('click', function(){
+                heroes[3].text[0]="Иди в лабу"
+            })
+            let choiceTwoBtn = document.querySelector('.choice_two')
+            choiceTwoBtn.addEventListener('click', function(){
+                heroes[3].text[0]="Дай потрогать"
+            })
+        }
+        else{
+            hero_text.innerHTML = active_hero.text[text_counter]
+        }
     }
     
 })

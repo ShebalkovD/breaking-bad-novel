@@ -64,6 +64,13 @@ body{
 
 }
 
+.choice_one:hover{
+    color: red;
+}
+.choice_two:hover{
+    color: red;
+}
+
 @media (max-width: 768px){
     .name{
         font-size: 32px;
