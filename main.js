@@ -32,12 +32,12 @@ let heroes = [
     {
         name:"Сalter",
         img: 'url(https://kartinki.pics/uploads/posts/2022-12/1670615864_1-kartinkin-net-p-kartinki-lisikh-kotov-vkontakte-1.jpg)',
-        text: ['Нет, Гус. Я умираю']
+        text: ['Нет, Гус. Я болен']
     },
     {
         name:"Guz",
         img: 'url(https://kartinki.pics/pics/uploads/posts/2022-07/thumbs/1658314144_3-kartinkin-net-p-chernii-sfinks-zhivotnie-krasivo-foto-3.jpg)',
-        text: ['Calter, если бы ты знал, насколько мне похуй, Calter.', 'Самое главное, чтобы ты вернулся в лабу и начал варить долбаный вискас, Calter', 'И где этот придурок, Джесси?']
+        text: ['Calter, если бы ты знал, насколько мне все равно.', 'Самое главное, чтобы ты вернулся в лабу и начал варить долбаный вискас, Calter', 'И где этот придурок, Джесси?']
     },
     {
         name:"Сalter",
@@ -47,7 +47,7 @@ let heroes = [
     {
         name:"Jussy",
         img: 'url(Jussy.jpg)',
-        text: ['Йоу, вы позвонили Джесси. Меня нет дома, так что оставь сообщение, сучара']
+        text: ['Йоу, вы позвонили Джесси. Меня нет дома, так что оставь сообщение, $d@*a%']
     },
     {
         name:"Сalter",
